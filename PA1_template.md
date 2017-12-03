@@ -41,15 +41,11 @@ Make a Histogram From the `steps_per_day` data frame
 
 ```r
 steps_per_day %>% 
-  ggplot(aes(x = date, y = totalSteps)) +
-  geom_histogram(stat = "identity") + 
-  ggtitle("Total Steps Taken Per Day") +
+  ggplot(aes(x = totalSteps)) +
+  geom_histogram(bins = 8) + 
+  ggtitle("Total Steps Taken Per Day Histogram") +
   xlab("Total Steps") + 
   ylab("Date")
-```
-
-```
-## Warning: Ignoring unknown parameters: binwidth, bins, pad
 ```
 
 ![](PA1_template_files/figure-html/unnamed-chunk-4-1.png)<!-- -->
@@ -183,15 +179,11 @@ Make a Histogram From the `steps_per_day_imputted` data frame
 
 ```r
 steps_per_day_imputted %>% 
-  ggplot(aes(x = date, y = totalSteps)) +
-  geom_histogram(stat = "identity") + 
+  ggplot(aes(x = totalSteps)) +
+  geom_histogram(bins = 8) + 
   ggtitle("Total Steps Taken Per Day") +
   xlab("Total Steps") + 
   ylab("Date")
-```
-
-```
-## Warning: Ignoring unknown parameters: binwidth, bins, pad
 ```
 
 ![](PA1_template_files/figure-html/unnamed-chunk-12-1.png)<!-- -->
